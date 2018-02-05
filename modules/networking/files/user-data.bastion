@@ -1,0 +1,11 @@
+#cloud-config
+users:
+  - default
+  - name: user1
+    ssh-authorized-keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADCCCBBBAABAQC6maE472wIrrW5qa9e1YoNJMrwj7Bs/Dd/gYnX+1SZLHNqcvtLDGsScVf0XWvOjoIg/kbD7RS8dzRxMZd7ZuXDmlFxVLF87puIon9r42345WG7G3fTGOQSV6p3YB76le1WkfyQ40jxsaRGonflm4QVtl9s0Zrnc/lrSz5QtKynxsM5rwFUbO2+kw+FAA+O+YiW5twe3r4tsai8kz0UgWU1yHH0ynsg4wdYS7TTRs+Z6NQe7H02NuUnTrZZ+qkRIt9KKoGRfpDySXy9O/a8dk/6z8QHBf0DEOw8Ksd234wNjdutDto9RzpS8Y10MqEUgeIH/jJgTcQTYotEZVZhCd/qMgjyaeXzreR rwildgrube@rwildgrube-lt1
+    shell: /bin/false
+  - name: user2
+    ssh-authorized-keys:
+      - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABsdettdsAASSff33ABAQDKJcJnfT3JcTTvvcl6nB2Ht6xS/SMD/9NYuC0nldMatz7NvTo2mQZdWUFqaNeiRCKQNXI7vjS5Xyq/yBTKz6o7zesieda86VNz73wEiHlW232w34wKEDpgC2oT6fiqqN5GrYfGVVq0QeyfkRkiiTf8ITMlRCzZAeXpHPDD8BlFf0lfgLnQVi/m+CUYYI4aAhl5oTCutQJD7D6w2yudR9WCjZo7SNz90D5UApGvB39bhWAKb9o2FZs9qqJzFG7q6zntDKTS3KIkz7x9g7PPIGEjs4pLgUvCW1O1s3QGuJj6pFw1GYU7Pb6+GKz3tvd678qmbscggxTgKRWYqgYTlxWm7O6WqcfyJV7F/H6l user@domain.com
+    shell: /bin/false
