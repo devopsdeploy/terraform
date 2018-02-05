@@ -5,10 +5,10 @@ resource "aws_key_pair" "node_key" {
 
 
 
-module "romildo" {
+module "user1" {
   source              = "../modules/node"
   region              = "${var.region}"
-  instance_type       = "t2.large"
+  instance_type       = "t2.micro"
   private_subnet_id   = "${module.networking.private_subnet_id}"
   public_subnet_id    = "${module.networking.public_subnet_id}"
   vpc_sg_id           = "${module.networking.default_sg_id}"
@@ -16,12 +16,13 @@ module "romildo" {
   environment         = "${var.environment}"
   vpc_id              = "${module.networking.vpc_id}"
   vpc_cidr_block      = "${module.networking.bastion_sg_id}"
-  node_owner          = "romildo"
+  node_owner          = "user1"
   dns_record          = "aws1-build-01"
   dns_zone_id         = "${module.networking.dns_private_zone_id}"
   dns_domain          = "devopsdeploy.com"
   #user_data           = "${file("${path.module}/files/${var.node_owner}-user_data.sh")}"
 }
+
 
 
 /*

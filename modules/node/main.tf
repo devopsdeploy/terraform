@@ -31,7 +31,7 @@ resource "aws_security_group" "node_server_sg" {
   }
 }
 
-/* Bastion Node */
+/*  Node */
 resource "aws_instance" "node" {
   #count             = "${var.node_instance_count}"
   ami               = "${lookup(var.amis, var.region)}"

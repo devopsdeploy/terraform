@@ -1,8 +1,7 @@
 # Here we define the Bastion Host Key
 resource "aws_key_pair" "bastion_key" {
   key_name   = "bastion_sshkey"
-  #public_key = "${file("${path.module}/keys/bastion_key.pub")}"
-  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAEEWWRR334Dd5n2cYKUUeGVt4b6WgWTHAvMG++scWc8IO5Ca5sYJOCZBq0Ti3425234523YmYwp5lhGV6JyKsIZaSiwxQUAto0BOgobMGaYZ0cnmcWX3GL3zwvhAc7eLPpcYL0/PZ8PotamB1FVYFLdUi0LEQ/R3GZFxBcp8b2mzoW4jWGb6loC8HyrX6SMObgn6PQyp7f8EpcI0tZYQZfyWDyGHqmk4TLVevK/K2YfqiF69s+bZdwefqwer@432523523HRiyFzFaHNGBh8XSIUFAXzZHeGLEaGfIa1b3d1XXsz8HEi4rOvi20Q1CGUC/Aj3DeGQd6osRh3lkgZ/Dvp3tN staging_key"
+  public_key = "${file("${path.module}/keys/bastion_key.pub")}"
 }
 
 # Now we create a bastion host
